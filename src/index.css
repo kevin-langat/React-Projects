@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+  --text-vsm: 0.75em;
+  --text-nsm: 0.8em;
+}
+
+body {
+  font-family: cursive;
+}
