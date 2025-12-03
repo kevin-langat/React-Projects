@@ -33,13 +33,13 @@ function NavBar() {
           </Link>
           <Link
             className={` ${
-              location.pathname.endsWith('responsive-design')
+              location.pathname.endsWith('random-color-generator')
                 ? 'bg-sky-800/20 outline-1 outline-gray-400 '
                 : ''
             } focus:bg-sky-600/30 focus:outline-1 rounded-full px-2 `}
-            to='/responsive-design'
+            to='/random-color-generator'
           >
-            Responsive Design
+            Random Color Generator
           </Link>
 
           <Link

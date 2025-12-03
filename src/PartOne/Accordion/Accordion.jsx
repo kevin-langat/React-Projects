@@ -1,6 +1,7 @@
 import { ArrowDown, ChevronDown } from 'lucide-react';
 import { accordionData } from '../../Config/data';
 import { useEffect, useState } from 'react';
+import { Switch } from '@/components/ui/switch';
 
 function Accordion() {
   const [selectedAccordion, setSelectedAccordion] = useState(null);
@@ -90,12 +91,16 @@ function Accordion() {
           </div>
         ))}
       </div>
-      <button
-        onClick={() => setMultiSelectStatus(!multiSelectStatus)}
-        className='bg-linear-to-br from-blue-600 to-fuchsia-600 py-1 px-2 hover:from-fuchsia-500 hover:to-sky-500 duration-700 transform ease-out  rounded-[0.3em] text-gray-300'
-      >
-        Enable Multi Select
-      </button>
+
+      <div className='flex items-center space-x-2'>
+        <label htmlFor='airplane-mode'>Enable Multi Open</label>
+        <Switch
+          checked={multiSelectStatus}
+          onCheckedChange={() => setMultiSelectStatus(!multiSelectStatus)}
+          id='airplane-mode'
+          className='bg-gray-400'
+        />
+      </div>
     </div>
   );
 }
