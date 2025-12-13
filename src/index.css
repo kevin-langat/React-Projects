@@ -6,6 +6,7 @@
 @theme {
   --text-vsm: 0.75em;
   --text-nsm: 0.8em;
+  --text-tsm: 0.85em;
   --text-lsm: 0.9em;
   --text-nlsm: 1.1em;
 }
@@ -13,7 +14,6 @@
 body {
   font-family: cursive;
 }
-
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -194,3 +194,71 @@ body {
   0% { transform: rotate(0deg) }
   100% { transform: rotate(360deg) }
 }
+
+.loaderTwo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotateTwo 1s linear infinite
+    }
+    .loaderTwo::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FFF;
+      animation: prixClipFix 0.2s linear infinite ;
+    }
+
+    @keyframes rotateTwo {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+.loaderThree {
+    width: 70px;
+    height: 35px;
+    position: relative;
+    overflow: hidden;
+  }
+  .loaderThree:before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 5px solid #0000;
+    border-color: #000 #000 #0000 #0000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotateThree 1s ease-in-out infinite;
+    transform: rotate(-200deg);
+  }
+  @keyframes rotateThree {
+    0% {
+      border-width: 10px;
+    }
+    25% {
+      border-width: 3px;
+    }
+    50% {
+      transform: rotate(115deg);
+      border-width: 10px;
+    }
+    75% {
+      border-width: 3px;
+    }
+    100% {
+      border-width: 10px;
+    }
+  }
+   

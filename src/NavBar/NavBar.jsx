@@ -1,11 +1,27 @@
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '/logo.png';
 import { ArrowLeftIcon, ArrowRightIcon, PanelLeftIcon, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function NavBar() {
   const navigateTo = useNavigate();
   const [sideBar, setSideBar] = useState(false);
+  const sideBarRef = useRef();
+
+  useEffect(() => {
+    function closeSiderOnOutsideClick(event) {
+      if (!sideBarRef.current || !sideBarRef.current.contains(event.target)) {
+        setSideBar(false);
+      }
+    }
+    document.addEventListener('mousedown', closeSiderOnOutsideClick);
+    document.addEventListener('touchstart', closeSiderOnOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', closeSiderOnOutsideClick);
+      document.removeEventListener('touchstart', closeSiderOnOutsideClick);
+    };
+  }, []);
 
   useEffect(() => {
     if (location.pathname === '/') {
@@ -14,8 +30,8 @@ function NavBar() {
   }, [location.pathname]);
 
   return (
-    <div className='relative transition duration-1000 ease-in flex flex-row h-full  w-full'>
-      <div className=' z-50 bg-white w-full shadow px-4 h-15 flex flex-row items-center justify-between'>
+    <div className='relative transition z-50 duration-1000 ease-in flex flex-row h-full  w-full'>
+      <div className=' z-50 bg-white w-full shadow px-4 h-12 flex flex-row items-center justify-between'>
         <img
           src={logo}
           onClick={() => navigateTo('/accordion-component')}
@@ -86,11 +102,12 @@ function NavBar() {
           </h2>
         </button>
       </div>
-      {/* start os side bar */}
+      {/* start of side bar */}
       <div
+        ref={sideBarRef}
         className={` ${
-          sideBar ? 'mr-0.5 flex' : '-mr-[26%] hidden'
-        } duration-200 transition ease-in sideBar z-50 flex-col gap-1 pl-4  py-3  absolute shadow-2xl shadow-black bg-gray-950 outline-1 rounded-[0.5em] outline-gray-400 w-[45%] sm:w-1/3 md:w-[28%] lg:w-[24%] right-2 h-screen text-lsm`}
+          sideBar ? 'opacity-100 flex' : 'opacity-0 hidden'
+        } duration-200 transition  ease-in sideBar z-50 flex-col gap-1 pl-4  py-3  absolute shadow-2xl shadow-black bg-gray-950 outline-1 rounded-[0.5em] outline-gray-400 w-[45%] sm:w-1/3 md:w-[28%] lg:w-[24%] right-2 h-screen text-lsm`}
       >
         <div className=' bg-linear-to-br from-sky-400/50 to-green-500/70 w-[73.5] rounded-t-[0.5em]  -ml-4 -mt-3  h-6 flex flex-col items-end justify-end '>
           {' '}
@@ -124,6 +141,125 @@ function NavBar() {
             to={'/qr-code-generator'}
           >
             QR Code Generator
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/light-dark-component'}
+          >
+            Light Dark Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/scroll-indicator'}
+          >
+            Scroll Indicator
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/custom-tab-component'}
+          >
+            Custom Tab Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/modal-popup-component'}
+          >
+            Modal Popup Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/github-profile-finder'}
+          >
+            Github Profile Finder
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/search-autocomplete-component'}
+          >
+            Search Autocomplete Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/tic-tac-toe-game'}
+          >
+            Tic Tac Toe Game
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline active:text-orange-400 text-gray-400'
+            to={'/feature-flag-component'}
+          >
+            Feature Flag Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 text-fuchsia-500 hover:underline active:text-orange-400 '
+            to={'/custom-hooks-component'}
+          >
+            Use Effect Custom Hook
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 text-fuchsia-500 hover:underline active:text-orange-400 '
+            to={'/use-onclick-outside-component'}
+          >
+            Use Outside Onclick Hook
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 text-fuchsia-500 hover:underline active:text-orange-400 '
+            to={'/use-window-resize-component'}
+          >
+            Use Window Resize Hook
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/scroll-to-top-bottom-component'}
+          >
+            Scroll To Top Bottom Element
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/scroll-to-top-bottom-component-document'}
+          >
+            Scroll To Top Bottom Document
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/scroll-to-section-component'}
+          >
+            Scroll To A Section Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/weather-app-component'}
+          >
+            Weather App Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/recipe-app'}
+          >
+            Recipe App
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            to={'/shopping-cart'}
+          >
+            Shopping Cart Component
           </Link>
         </div>
       </div>

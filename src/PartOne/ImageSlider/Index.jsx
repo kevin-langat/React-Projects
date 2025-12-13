@@ -10,6 +10,16 @@ function ImageSlider() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (currentSlide === images.length - 1) {
+        setCurrentSlide(0);
+      } else {
+        setCurrentSlide(currentSlide + 1);
+      }
+    }, 3000);
+  }, [currentSlide]);
+
   function handleMoveToNextImage() {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
@@ -35,13 +45,13 @@ function ImageSlider() {
   return (
     <div className='flex flex-col *:even:-mb-3 items-center w-full gap-4'>
       <h2 className='underline select-none'>Image Slider</h2>
-      <div className=' h-48 p-0.5 rounded-[0.5em] w-1/5 overflow-x-auto  bg-gray-800 outline-1 flex-row flex gap-2  outline-gray-600'>
+      <div className=' h-48 p-0.5 rounded-[0.5em] w-1/5 overflow-x-auto transform duration-200 ease-in-out   bg-gray-800 outline-1 flex-row flex gap-2  outline-gray-600'>
         {images?.map((image, index) => (
           <div
             key={image.id}
             className={`${
               currentSlide !== index ? 'hidden' : 'flex'
-            }  items-center select-none h-full justify-center w-full flex-row shrink-0`}
+            }  items-center  transform duration-200 ease-in-out select-none h-full justify-center w-full flex-row shrink-0`}
           >
             <img
               className={`shrink-0 w-full h-full object-cover rounded-lg shadow-lg`}

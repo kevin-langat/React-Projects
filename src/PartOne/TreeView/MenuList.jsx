@@ -8,7 +8,9 @@ function MenuList({ list = [], styles }) {
       className=' gap-2 flex flex-col list-decimal ml-5 *:odd:list-decimal'
     >
       {list && list.length
-        ? list?.map((listItem) => <MenuItem listItem={listItem} />)
+        ? list?.map((listItem, index) => (
+            <MenuItem key={index} listItem={listItem} />
+          ))
         : null}
     </ul>
   );
