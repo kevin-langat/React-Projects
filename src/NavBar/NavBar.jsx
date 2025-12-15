@@ -242,24 +242,31 @@ function NavBar() {
           </Link>
           <Link
             onClick={() => setSideBar(false)}
-            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
             to={'/weather-app-component'}
           >
             Weather App Component
           </Link>
           <Link
             onClick={() => setSideBar(false)}
-            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
             to={'/recipe-app'}
           >
             Recipe App
           </Link>
           <Link
             onClick={() => setSideBar(false)}
-            className='hover:text-sky-600 hover:underline text-green-500 active:text-orange-400 '
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
             to={'/shopping-cart'}
           >
             Shopping Cart Component
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/expense-tracker'}
+          >
+            Expense Tracker
           </Link>
         </div>
       </div>
