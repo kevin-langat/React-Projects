@@ -30,6 +30,9 @@ import RecipePage from './PartOne/RecipeApp/RecipePage';
 import ShoppingCart from './PartOne/ShoppingCart/Index';
 import Cart from './PartOne/ShoppingCart/Cart';
 import ExpenseTracker from './PartOne/ExpenseTracker/Index';
+import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
+import Pagination from './PartTwo/Pagination';
+import PaginationComponent from './PartTwo/Index';
 
 function App() {
   return (
@@ -99,6 +102,10 @@ function App() {
         <Route path='/shopping-cart' element={<ShoppingCart />} />
         <Route path='/my-cart' element={<Cart />} />
         <Route path='/expense-tracker' element={<ExpenseTracker />} />
+        <Route path='/blog-app' element={<BlogApp />} />
+
+        {/* Part two of the projects */}
+        <Route path='/pagination-component' element={<PaginationComponent />} />
       </Route>
     </Routes>
   );

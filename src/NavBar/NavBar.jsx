@@ -117,9 +117,10 @@ function NavBar() {
           />
         </div>
 
-        <div className='custom-scroll flex flex-col gap-1 overflow-y-auto '>
+        <div className=' custom-scrollbar flex flex-col gap-1 overflow-y-auto '>
+          {/* PART ONE */}
           <h2 className='sideBar  text-orange-500 rounded-full underline'>
-            All Projects
+            Part One (25 Projects)
           </h2>
           <Link
             onClick={() => setSideBar(false)}
@@ -267,6 +268,25 @@ function NavBar() {
             to={'/expense-tracker'}
           >
             Expense Tracker
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/blog-app'}
+          >
+            Blog app
+          </Link>
+
+          {/* PART TWO 25 PROJECTS */}
+          <h2 className='sideBar  text-orange-500 rounded-full underline'>
+            Part Two (25 Projects)
+          </h2>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/pagination-component'}
+          >
+            Pagination Component
           </Link>
         </div>
       </div>
