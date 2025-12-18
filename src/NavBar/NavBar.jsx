@@ -38,7 +38,7 @@ function NavBar() {
           className=' w-10 hover:scale-110 transition duration-300 ease-in-out h-10 '
           alt='react'
         />
-        <div className=' hidden group md:flex font-light h-3/4 px-3 bg-gray-100 *:py-0.5 md:w-3/4 text-[0.77em] mask-r-from-95% mask-r-to-100% mask-l-from-95% mask-l-to-100%  flex-row  items-center justify-around *:hover:underline decoration-1 decoration-blue-500 *:hover:text-blue-600'>
+        <div className=' hidden group md:flex font-light h-3/4 px-3 bg-gray-100 *:py-0.5 md:w-3/4 text-[0.77em] mask-r-from-95% mask-r-to-100% mask-l-from-95% mask-l-to-100%  flex-row  items-center justify-around *:hover:underline decoration-1 text-gray-900 decoration-blue-500 *:hover:text-blue-600'>
           <Link
             className={` ${
               location.pathname.endsWith('accordion-component')
