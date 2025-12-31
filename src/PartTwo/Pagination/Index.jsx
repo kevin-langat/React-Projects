@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PaginationHelper from './Pagination';
+import PaginationTwo from '../Pagination Two/Index';
 
 function PaginationComponent() {
   const dummyData = Array.from({ length: 100 }, (_, index) => ({
@@ -16,8 +17,8 @@ function PaginationComponent() {
     setCurrentPage(currentPage);
   }
   return (
-    <div className='w-3/4 flex items-center justify-center flex-col gap-4'>
-      <h2>Pagination Component</h2>
+    <div className='w-3/4  flex items-center justify-center flex-col gap-4'>
+      <h2 className='underline'>Pagination example one</h2>
       <ul className='w-full gap-2 grid grid-cols-5'>
         {currentListOfItems.map((item) => (
           <li className='bg-green-500 flex flex-col items-center'>
@@ -30,6 +31,9 @@ function PaginationComponent() {
         currentPage={currentPage}
         onPageChange={handlePageChange}
       />
+
+      <h1 className='underline'>Pagination example two</h1>
+      <PaginationTwo />
     </div>
   );
 }

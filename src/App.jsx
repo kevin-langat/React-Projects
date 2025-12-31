@@ -32,7 +32,8 @@ import Cart from './PartOne/ShoppingCart/Cart';
 import ExpenseTracker from './PartOne/ExpenseTracker/Index';
 import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
 import Pagination from './PartTwo/Pagination';
-import PaginationComponent from './PartTwo/Index';
+import PaginationComponent from './PartTwo/Pagination/Index';
+import DigitalClock from './PartTwo/DigitalClock/Index';
 
 function App() {
   return (
@@ -106,6 +107,7 @@ function App() {
 
         {/* Part two of the projects */}
         <Route path='/pagination-component' element={<PaginationComponent />} />
+        <Route path='/digital-clock' element={<DigitalClock />} />
       </Route>
     </Routes>
   );
