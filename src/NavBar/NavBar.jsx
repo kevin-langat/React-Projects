@@ -295,6 +295,13 @@ function NavBar() {
           >
             Digital Clock{' '}
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/step-progress-bar'}
+          >
+            Step Progress Bar
+          </Link>
         </div>
       </div>
     </div>

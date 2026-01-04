@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import CommonLayout from './Layout/CommonLayout';
 import Accordion from './PartOne/Accordion/Accordion';
 import RandomColorGenerator from './PartOne/RandomColorGen/Index';
-import Index from './PartOne/StarRatingComponent/Index';
+
 import StarRatingComponent from './PartOne/StarRatingComponent/Index';
 import ImageSlider from './PartOne/ImageSlider/Index';
 import LoadMoreComponent from './PartOne/LoadMoreComponent/Index';
@@ -21,7 +21,7 @@ import UseFetchHook from './PartOne/CustomHooks/UseFetch/Index';
 import UseOnclickOutside from './PartOne/CustomHooks/UseOnclickOutside/Index';
 import UseWindowResize from './PartOne/CustomHooks/UseWindowResize/Index';
 import ScrollToTopBottomComponent from './PartOne/ScrollTopBottomComponent/Index';
-import ScrollToTopBottomComponentDocument from './PartOne/ScrollTopBottomComponent/IndexDocument';
+
 import ScrollToSection from './PartOne/ScrollTopBottomComponent/IndexSection';
 import WeatherAppComponent from './PartOne/WeatherApp/Index';
 import RecipeApp from './PartOne/RecipeApp/Index';
@@ -31,7 +31,7 @@ import ShoppingCart from './PartOne/ShoppingCart/Index';
 import Cart from './PartOne/ShoppingCart/Cart';
 import ExpenseTracker from './PartOne/ExpenseTracker/Index';
 import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
-import Pagination from './PartTwo/Pagination';
+import StepProgressBar from './PartTwo/StepProgressBar/StepProgressBar';
 import PaginationComponent from './PartTwo/Pagination/Index';
 import DigitalClock from './PartTwo/DigitalClock/Index';
 
@@ -108,6 +108,7 @@ function App() {
         {/* Part two of the projects */}
         <Route path='/pagination-component' element={<PaginationComponent />} />
         <Route path='/digital-clock' element={<DigitalClock />} />
+        <Route path='/step-progress-bar' element={<StepProgressBar />} />
       </Route>
     </Routes>
   );
