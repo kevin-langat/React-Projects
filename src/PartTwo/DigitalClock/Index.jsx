@@ -1,19 +1,11 @@
 import { useEffect, useState } from 'react';
+import CountDownTimer from './CountDownTimer';
 
 function DigitalClock() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  useEffect(() => {
-    setInterval(() => {
-      setCounterTime({
-        ...counterTime,
-        hour: 0,
-        min: 0,
-        seconds: 0,
-        microseconds: counterTime.microseconds + 100,
-      });
-    }, 10000);
-  }, []);
+  function handleOnTimeFinish() {}
+
   useEffect(() => {
     setInterval(() => {
       setCurrentDate(new Date());
@@ -42,8 +34,8 @@ function DigitalClock() {
           })}
         </h2>
       </div>
-      <h2>Timer</h2>
-      <h2></h2>
+
+      <CountDownTimer initialTime={120} onTimeFinish={handleOnTimeFinish} />
     </div>
   );
 }
