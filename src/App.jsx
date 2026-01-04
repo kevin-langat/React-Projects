@@ -31,9 +31,9 @@ import ShoppingCart from './PartOne/ShoppingCart/Index';
 import Cart from './PartOne/ShoppingCart/Cart';
 import ExpenseTracker from './PartOne/ExpenseTracker/Index';
 import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
-import PaginationComponent from './PartTwo/Pagination/Index';
-import DigitalClock from './PartTwo/DigitalClock';
 import StepProgressBar from './PartTwo/StepProgressBar/StepProgressBar';
+import PaginationComponent from './PartTwo/Pagination/Index';
+import DigitalClock from './PartTwo/DigitalClock/Index';
 
 function App() {
   return (
