@@ -31,9 +31,9 @@ import ShoppingCart from './PartOne/ShoppingCart/Index';
 import Cart from './PartOne/ShoppingCart/Cart';
 import ExpenseTracker from './PartOne/ExpenseTracker/Index';
 import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
-import Pagination from './PartTwo/Pagination';
 import PaginationComponent from './PartTwo/Pagination/Index';
 import DigitalClock from './PartTwo/DigitalClock/Index';
+import StepProgressBar from './PartTwo/StepProgressBar/StepProgressBar';
 
 function App() {
   return (
@@ -108,6 +108,7 @@ function App() {
         {/* Part two of the projects */}
         <Route path='/pagination-component' element={<PaginationComponent />} />
         <Route path='/digital-clock' element={<DigitalClock />} />
+        <Route path='/step-progress-bar' element={<StepProgressBar />} />
       </Route>
     </Routes>
   );
