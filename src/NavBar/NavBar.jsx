@@ -309,6 +309,13 @@ function NavBar() {
           >
             Random Quote Generator
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/tooltip'}
+          >
+            Tool Tip
+          </Link>
         </div>
       </div>
     </div>
