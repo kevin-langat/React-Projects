@@ -302,6 +302,13 @@ function NavBar() {
           >
             Step Progress Bar
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/random-quote-gen'}
+          >
+            Random Quote Generator
+          </Link>
         </div>
       </div>
     </div>

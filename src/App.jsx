@@ -34,6 +34,7 @@ import BlogApp from './PartOne/MERNStackBlogApp/Client/Index';
 import StepProgressBar from './PartTwo/StepProgressBar/StepProgressBar';
 import PaginationComponent from './PartTwo/Pagination/Index';
 import DigitalClock from './PartTwo/DigitalClock/Index';
+import RandomQuoteGen from './PartTwo/QuoteGen/Index';
 
 function App() {
   return (
@@ -109,6 +110,7 @@ function App() {
         <Route path='/pagination-component' element={<PaginationComponent />} />
         <Route path='/digital-clock' element={<DigitalClock />} />
         <Route path='/step-progress-bar' element={<StepProgressBar />} />
+        <Route path='/random-quote-gen' element={<RandomQuoteGen />} />
       </Route>
     </Routes>
   );

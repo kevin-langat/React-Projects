@@ -35,7 +35,7 @@ function StepProgress({ steps, activeStep, setActiveStep }) {
           Previous
         </button>
         <button
-          className='bg-blue-500  px-6 py-1 rounded-[0.2em]                      disabled:bg-gray-400'
+          className='bg-blue-500  px-6 py-1 rounded-[0.2em]         disabled:bg-gray-400'
           disabled={activeStep === steps.length - 1}
           onClick={handleNextStep}
         >
