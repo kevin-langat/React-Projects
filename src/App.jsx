@@ -36,6 +36,7 @@ import PaginationComponent from './PartTwo/Pagination/Index';
 import DigitalClock from './PartTwo/DigitalClock/Index';
 import RandomQuoteGen from './PartTwo/QuoteGen/Index';
 import ToolTip from './PartTwo/ToolTip/ToolTip';
+import CurrencyConverter from './PartTwo/CurrencyConverter/CurrencyConverter';
 
 function App() {
   return (
@@ -113,6 +114,7 @@ function App() {
         <Route path='/step-progress-bar' element={<StepProgressBar />} />
         <Route path='/random-quote-gen' element={<RandomQuoteGen />} />
         <Route path='/tooltip' element={<ToolTip />} />
+        <Route path='/currency-converter' element={<CurrencyConverter />} />
       </Route>
     </Routes>
   );
