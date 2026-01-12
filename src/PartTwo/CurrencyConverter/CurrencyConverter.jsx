@@ -5,7 +5,7 @@ function CurrencyConverter() {
   const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('KES');
   const [fromCurrencyInfo, setFromCurrencyInfo] = useState({});
-  const [toAmount, setToAmount] = useState(1);
+  const [toAmount, setToAmount] = useState(128.97);
 
   async function fetchCurrencyData() {
     const res = await fetch(
@@ -59,7 +59,7 @@ function CurrencyConverter() {
             type='number'
             name='fromcurrency'
             placeholder='Enter amount'
-            className='outline-1 outline-red-500 field-sizing-content min-w-20'
+            className='outline-1 outline-red-500 158 field-sizing-content min-w-20'
           />
           <select
             value={toCurrency}
