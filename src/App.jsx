@@ -39,6 +39,7 @@ import ToolTip from './PartTwo/ToolTip/ToolTip';
 import CurrencyConverter from './PartTwo/CurrencyConverter/CurrencyConverter';
 import ProductFilter from './PartTwo/ProductFilter/ProductFilter';
 import TipCalculator from './PartTwo/TipCalculator/TipCalculator';
+import MusicPlayer from './PartTwo/MusicPlayer/MusicPlayer';
 
 function App() {
   return (
@@ -119,6 +120,7 @@ function App() {
         <Route path='/currency-converter' element={<CurrencyConverter />} />
         <Route path='/product-filter-by-category' element={<ProductFilter />} />
         <Route path='/tip-calculator' element={<TipCalculator />} />
+        <Route path='/music-player' element={<MusicPlayer />} />
       </Route>
     </Routes>
   );
