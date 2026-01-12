@@ -37,6 +37,8 @@ import DigitalClock from './PartTwo/DigitalClock/Index';
 import RandomQuoteGen from './PartTwo/QuoteGen/Index';
 import ToolTip from './PartTwo/ToolTip/ToolTip';
 import CurrencyConverter from './PartTwo/CurrencyConverter/CurrencyConverter';
+import ProductFilter from './PartTwo/ProductFilter/ProductFilter';
+import TipCalculator from './PartTwo/TipCalculator/TipCalculator';
 
 function App() {
   return (
@@ -115,6 +117,8 @@ function App() {
         <Route path='/random-quote-gen' element={<RandomQuoteGen />} />
         <Route path='/tooltip' element={<ToolTip />} />
         <Route path='/currency-converter' element={<CurrencyConverter />} />
+        <Route path='/product-filter-by-category' element={<ProductFilter />} />
+        <Route path='/tip-calculator' element={<TipCalculator />} />
       </Route>
     </Routes>
   );

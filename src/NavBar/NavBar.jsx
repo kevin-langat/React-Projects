@@ -276,7 +276,6 @@ function NavBar() {
           >
             Blog app
           </Link>
-
           {/* PART TWO 25 PROJECTS */}
           <h2 className='sideBar  text-orange-500 rounded-full underline'>
             Part Two (25 Projects)
@@ -322,6 +321,20 @@ function NavBar() {
             to={'/currency-converter'}
           >
             Currency Coverter
+          </Link>{' '}
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/product-filter-by-category'}
+          >
+            Product filter
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/tip-calculator'}
+          >
+            Tip Calculator
           </Link>
         </div>
       </div>
