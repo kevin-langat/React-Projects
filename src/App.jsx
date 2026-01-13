@@ -40,6 +40,9 @@ import CurrencyConverter from './PartTwo/CurrencyConverter/CurrencyConverter';
 import ProductFilter from './PartTwo/ProductFilter/ProductFilter';
 import TipCalculator from './PartTwo/TipCalculator/TipCalculator';
 import MusicPlayer from './PartTwo/MusicPlayer/MusicPlayer';
+import ProgressBar from './PartTwo/ProgressBar/ProgressBar';
+import BMICalculator from './PartTwo/BMICalculator/BMICalculator';
+import ButtonRippleEffect from './PartTwo/ButtonRippleEffect/ButtonRippleEffect';
 
 function App() {
   return (
@@ -121,6 +124,9 @@ function App() {
         <Route path='/product-filter-by-category' element={<ProductFilter />} />
         <Route path='/tip-calculator' element={<TipCalculator />} />
         <Route path='/music-player' element={<MusicPlayer />} />
+        <Route path='/progress-bar' element={<ProgressBar />} />
+        <Route path='/bmi-calculator' element={<BMICalculator />} />
+        <Route path='/button-ripple-effect' element={<ButtonRippleEffect />} />
       </Route>
     </Routes>
   );

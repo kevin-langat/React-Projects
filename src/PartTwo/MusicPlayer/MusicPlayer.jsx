@@ -33,7 +33,7 @@ function MusicPlayer() {
           (audioRef.current.currentTime / audioRef.current.duration) * 100
         );
       }, 1000);
-      return () => clearInterval();
+      return () => clearInterval(interval);
     }
   }, [isPlaying]);
   return (

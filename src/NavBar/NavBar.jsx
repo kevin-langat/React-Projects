@@ -343,6 +343,27 @@ function NavBar() {
           >
             Music Player
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/progress-bar'}
+          >
+            Progress Bar
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/bmi-calculator'}
+          >
+            BMI Calculator
+          </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/button-ripple-effect'}
+          >
+            Button Ripple Effect
+          </Link>
         </div>
       </div>
     </div>
