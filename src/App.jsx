@@ -43,6 +43,7 @@ import MusicPlayer from './PartTwo/MusicPlayer/MusicPlayer';
 import ProgressBar from './PartTwo/ProgressBar/ProgressBar';
 import BMICalculator from './PartTwo/BMICalculator/BMICalculator';
 import ButtonRippleEffect from './PartTwo/ButtonRippleEffect/ButtonRippleEffect';
+import DragDrop from './PartTwo/DragDropComponent/DragDrop';
 
 function App() {
   return (
@@ -127,6 +128,7 @@ function App() {
         <Route path='/progress-bar' element={<ProgressBar />} />
         <Route path='/bmi-calculator' element={<BMICalculator />} />
         <Route path='/button-ripple-effect' element={<ButtonRippleEffect />} />
+        <Route path='/drag-and-drop-feature' element={<DragDrop />} />
       </Route>
     </Routes>
   );

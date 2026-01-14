@@ -364,6 +364,13 @@ function NavBar() {
           >
             Button Ripple Effect
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/drag-and-drop-feature'}
+          >
+            Drag And Drop Feature
+          </Link>
         </div>
       </div>
     </div>
