@@ -44,6 +44,8 @@ import ProgressBar from './PartTwo/ProgressBar/ProgressBar';
 import BMICalculator from './PartTwo/BMICalculator/BMICalculator';
 import ButtonRippleEffect from './PartTwo/ButtonRippleEffect/ButtonRippleEffect';
 import DragDrop from './PartTwo/DragDropComponent/DragDrop';
+import FormValidation from './PartTwo/FormValidation/FormValidation';
+import FileUpload from './PartTwo/FileUpload/FileUpload';
 
 function App() {
   return (
@@ -129,6 +131,8 @@ function App() {
         <Route path='/bmi-calculator' element={<BMICalculator />} />
         <Route path='/button-ripple-effect' element={<ButtonRippleEffect />} />
         <Route path='/drag-and-drop-feature' element={<DragDrop />} />
+        <Route path='/form-validation-component' element={<FormValidation />} />
+        <Route path='/file-upload-component' element={<FileUpload />} />
       </Route>
     </Routes>
   );
