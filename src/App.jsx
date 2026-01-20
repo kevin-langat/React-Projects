@@ -47,6 +47,7 @@ import DragDrop from './PartTwo/DragDropComponent/DragDrop';
 import FormValidation from './PartTwo/FormValidation/FormValidation';
 import FileUpload from './PartTwo/FileUpload/FileUpload';
 import QuizApp from './PartTwo/Quiz App/QuizApp';
+import NestedComments from './PartTwo/NestedComments/Index';
 
 function App() {
   return (
@@ -135,6 +136,7 @@ function App() {
         <Route path='/form-validation-component' element={<FormValidation />} />
         <Route path='/file-upload-component' element={<FileUpload />} />
         <Route path='/quiz-app' element={<QuizApp />} />
+        <Route path='/nested-comments-component' element={<NestedComments />} />
       </Route>
     </Routes>
   );

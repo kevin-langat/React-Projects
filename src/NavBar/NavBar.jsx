@@ -392,6 +392,13 @@ function NavBar() {
           >
             Quiz App
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/nested-comments-component'}
+          >
+            Nested Comments
+          </Link>
         </div>
       </div>
     </div>
