@@ -48,6 +48,7 @@ import FormValidation from './PartTwo/FormValidation/FormValidation';
 import FileUpload from './PartTwo/FileUpload/FileUpload';
 import QuizApp from './PartTwo/Quiz App/QuizApp';
 import NestedComments from './PartTwo/NestedComments/Index';
+import PDFViewerComponent from './PartTwo/PDFViewer/PDFViewer';
 
 function App() {
   return (
@@ -137,6 +138,7 @@ function App() {
         <Route path='/file-upload-component' element={<FileUpload />} />
         <Route path='/quiz-app' element={<QuizApp />} />
         <Route path='/nested-comments-component' element={<NestedComments />} />
+        <Route path='/pdf-viewer' element={<PDFViewerComponent />} />
       </Route>
     </Routes>
   );
