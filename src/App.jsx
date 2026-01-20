@@ -46,6 +46,7 @@ import ButtonRippleEffect from './PartTwo/ButtonRippleEffect/ButtonRippleEffect'
 import DragDrop from './PartTwo/DragDropComponent/DragDrop';
 import FormValidation from './PartTwo/FormValidation/FormValidation';
 import FileUpload from './PartTwo/FileUpload/FileUpload';
+import QuizApp from './PartTwo/Quiz App/QuizApp';
 
 function App() {
   return (
@@ -133,6 +134,7 @@ function App() {
         <Route path='/drag-and-drop-feature' element={<DragDrop />} />
         <Route path='/form-validation-component' element={<FormValidation />} />
         <Route path='/file-upload-component' element={<FileUpload />} />
+        <Route path='/quiz-app' element={<QuizApp />} />
       </Route>
     </Routes>
   );

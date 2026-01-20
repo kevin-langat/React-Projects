@@ -21,14 +21,12 @@ function FileUpload() {
     xhr.open('POST', 'https://v2.convertapi.com/upload');
     xhr.send(formData);
   }
-  console.log(statusRef);
 
   function handleProgress(e) {
     loadRef.current.innerHTML = `Uploaded ${e.loaded} bytes of ${e.total}`;
     const percentage = (e.loaded / e.total) * 100;
     progressRef.current.value = Math.round(percentage);
-    statusRef.current.innerHTML =
-      `${Math.round(percentage)}% uploaded` || 'Done';
+    statusRef.current.innerHTML = `${Math.round(percentage)}% uploaded`;
   }
 
   function handleSuccess(e) {
