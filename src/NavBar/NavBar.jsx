@@ -406,6 +406,13 @@ function NavBar() {
           >
             PDF Viewer
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/firebase-rodo-app'}
+          >
+            Firebase Todo App
+          </Link>
         </div>
       </div>
     </div>
