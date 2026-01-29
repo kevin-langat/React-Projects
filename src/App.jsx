@@ -50,6 +50,7 @@ import QuizApp from './PartTwo/Quiz App/QuizApp';
 import NestedComments from './PartTwo/NestedComments/Index';
 import PDFViewerComponent from './PartTwo/PDFViewer/PDFViewer';
 import FirebaseTodoApp from './PartTwo/FirebaseTodoApp/FirebaseTodoApp';
+import FirebaseAuth from './PartTwo/FirebaseAuth/FirebaseAuth';
 
 function App() {
   return (
@@ -140,7 +141,11 @@ function App() {
         <Route path='/quiz-app' element={<QuizApp />} />
         <Route path='/nested-comments-component' element={<NestedComments />} />
         <Route path='/pdf-viewer' element={<PDFViewerComponent />} />
-        <Route path='/firebase-rodo-app' element={<FirebaseTodoApp />} />
+        <Route
+          path='/firebase-rodo-app'
+          element={<FirebaseTodoApp authState={true} />}
+        />
+        <Route path='/firebase-auth-component' element={<FirebaseAuth />} />
       </Route>
     </Routes>
   );

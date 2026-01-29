@@ -13,7 +13,7 @@ import { useEffect, useState } from 'react';
 import { db } from './Firebase';
 import Todo from './Todo';
 
-function FirebaseTodoApp() {
+function FirebaseTodoApp({ authState }) {
   const [inputValue, setInputValue] = useState('');
   const [todos, setTodos] = useState();
   const [currentEdittedId, setCurrentEdittedId] = useState(null);
@@ -71,6 +71,7 @@ function FirebaseTodoApp() {
           todos.length > 0 &&
           todos.map((item) => (
             <Todo
+              authState={authState}
               setInputValue={setInputValue}
               setCurrentEdittedId={setCurrentEdittedId}
               todoItem={item}
