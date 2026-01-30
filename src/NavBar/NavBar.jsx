@@ -427,6 +427,13 @@ function NavBar() {
           >
             Debounce Api Call
           </Link>
+          <Link
+            onClick={() => setSideBar(false)}
+            className='hover:text-sky-600 hover:underline text-gray-400 active:text-orange-400 '
+            to={'/sort-component'}
+          >
+            Sort Component
+          </Link>
         </div>
       </div>
     </div>

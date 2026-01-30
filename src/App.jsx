@@ -52,6 +52,7 @@ import PDFViewerComponent from './PartTwo/PDFViewer/PDFViewer';
 import FirebaseTodoApp from './PartTwo/FirebaseTodoApp/FirebaseTodoApp';
 import FirebaseAuth from './PartTwo/FirebaseAuth/FirebaseAuth';
 import DebounceCall from './PartTwo/DebounceCall/DebounceCall';
+import SortComponent from './PartTwo/SortComponent/SortComponent';
 
 function App() {
   return (
@@ -149,6 +150,8 @@ function App() {
         <Route path='/firebase-auth-component' element={<FirebaseAuth />} />
 
         <Route path='/debounce-api-call' element={<DebounceCall />} />
+
+        <Route path='/sort-component' element={<SortComponent />} />
       </Route>
     </Routes>
   );
