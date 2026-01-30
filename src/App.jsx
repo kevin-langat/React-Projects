@@ -53,6 +53,8 @@ import FirebaseTodoApp from './PartTwo/FirebaseTodoApp/FirebaseTodoApp';
 import FirebaseAuth from './PartTwo/FirebaseAuth/FirebaseAuth';
 import DebounceCall from './PartTwo/DebounceCall/DebounceCall';
 import SortComponent from './PartTwo/SortComponent/SortComponent';
+import MovieApp from './PartTwo/MovieApp/MovieApp';
+import GlobalContext from './PartTwo/MovieApp/GlobalContext';
 
 function App() {
   return (
@@ -152,6 +154,14 @@ function App() {
         <Route path='/debounce-api-call' element={<DebounceCall />} />
 
         <Route path='/sort-component' element={<SortComponent />} />
+        <Route
+          path='/movie-app'
+          element={
+            <GlobalContext>
+              <MovieApp />
+            </GlobalContext>
+          }
+        />
       </Route>
     </Routes>
   );
